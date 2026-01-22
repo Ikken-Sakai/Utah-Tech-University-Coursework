@@ -1,0 +1,50 @@
+clear_used(board, group, used) -> 0 or 1:
+    used = ~used (flip the bits)
+    change_made = 0
+    for group_index = 0; group_index < 9; group_index++
+        board_index = group[group_index]
+        element = board[board_index]
+
+        count the number of set bits in the element as follows:
+        count = 0
+        for position = 1; position <= 9; position++
+            if element & (1<<position) is non-zero:
+                count += 1
+
+        if count != 1 (indicating an unsolved square):
+            new_element = element&used (clear the bits indicated by used)
+            if new_element != element:
+                store new_element back to the board
+                change_made = 1
+
+    return change_made
+
+
+clear_used(board, group, used) -> 0 or 1:
+    	used = ~used (flip the bits) #???
+		change_made = 0
+		group_index = 0
+1:
+		board_index = group[group_index]
+		element = board[board_index]
+
+		count = 0
+		position = 1
+2:
+		mask << position
+		temp = element & mask
+		if temp is zero: goto 3f
+		count += 1
+3:
+		position ++
+		if position <= 9: goto 2b
+		if count != 1: goto 4f
+		goto 5f
+4:
+		new_element = element & used
+		if new_element == element: goto 5f
+		change_made = 1
+5:
+    	group_index++
+    	if group_index < 9: goto 1b
+    	return change_made

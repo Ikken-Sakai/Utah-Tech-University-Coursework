@@ -1,0 +1,44 @@
+# Compiled Object files
+*.o
+*.obj
+
+# Executables
+a.out
+*.exe
+*.out
+
+# Editor swap files
+*.swp
+*.swo
+*~
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+*.so
+.ipynb_checkpoints/
+
+# Grind files
+.grind
+.gdbinit
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Build directories
+build/
+dist/
+
