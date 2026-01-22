@@ -71,6 +71,12 @@ This course covers fundamental data structures and algorithms essential for soft
 | `MazeSolverCrippled.py` | Maze solving using graph traversal / グラフ走査を使った迷路解決 |
 | `student.py` / `Student2.py` | Student record management system / 学生記録管理システム |
 
+## 📊 Test Data / テストデータ
+
+This folder contains test data files (`FakeNames.txt`, `InsertNames.txt`, `DeleteNames.txt`, etc.) used for testing data structure implementations. **All personal information in these files is fictional/generated data** created for educational purposes only.
+
+このフォルダには、データ構造実装のテスト用データファイル（`FakeNames.txt`、`InsertNames.txt`、`DeleteNames.txt`等）が含まれています。**これらのファイル内の個人情報はすべて架空・生成されたデータ**であり、教育目的でのみ作成されています。
+
 ## 🛠️ Technologies / 使用技術
 
 - Python 3.x
