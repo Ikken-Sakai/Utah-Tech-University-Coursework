@@ -3,95 +3,130 @@
 [![University](https://img.shields.io/badge/University-Utah%20Tech-red)](https://utahtech.edu/)
 [![Department](https://img.shields.io/badge/Department-Computer%20Science-blue)](https://utahtech.edu/)
 
-This repository contains coursework and projects from my Computer Science studies at Utah Tech University.
+This repository contains coursework and projects from my Computer Science studies at Utah Tech University (formerly Dixie State University).
 
 ## 📚 Courses
 
-### CS1410 - Introduction to Computer Science
+### [CS1410 - Introduction to Computer Science](./CS1410/)
+
 Fundamentals of programming with Python.
 
-| Project | Description | Language |
-|---------|-------------|----------|
-| [caloric_balance](./CS1410/caloric_balance.py) | Caloric balance calculator | Python |
-| [DNA](./CS1410/DNA.py) | DNA sequence analysis | Python |
-| [Create_Data_Files](./CS1410/Create_Data_Files.py) | File I/O operations | Python |
+| Project | Description |
+|---------|-------------|
+| `caloric_balance.py` | Caloric balance calculator |
+| `DNA.py` | DNA sequence analysis |
+| `Create_Data_Files.py` | File I/O operations |
 
-### CS2420 - Data Structures & Algorithms
-Implementation of fundamental data structures and algorithms.
+**Skills**: Python basics, File I/O, Functions
 
-| Project | Description | Language |
-|---------|-------------|----------|
-| [BST](./CS2420/BST.py) | Binary Search Tree implementation | Python |
-| [linkedlists](./CS2420/linkedlists.py) | Linked List implementation | Python |
-| [hashtable](./CS2420/hashtable.py) | Hash Table implementation | Python |
-| [heap](./CS2420/heap.py) | Heap/Priority Queue | Python |
-| [stack](./CS2420/stack.py) | Stack implementation | Python |
-| [queue](./CS2420/queue.py) | Queue implementation | Python |
-| [graph](./CS2420/graph.py) | Graph implementation | Python |
-| [graph-dijkstra](./CS2420/graph-dijkstra.py) | Dijkstra's shortest path algorithm | Python |
-| [sort1](./CS2420/sort1.py) | Sorting algorithms | Python |
-| [sort3](./CS2420/sort3.py) | Advanced sorting | Python |
-| [MazeSolver](./CS2420/MazeSolverCrippled.py) | Maze solving algorithm | Python |
+---
 
-### CS2810 - Computer Organization & Architecture
-Low-level programming with RISC-V assembly.
+### [CS2420 - Data Structures & Algorithms](./CS2420/)
 
-| Project | Description | Language |
-|---------|-------------|----------|
-| [rv32-stoi](./rv32-stoi/) | String to integer conversion | RISC-V Assembly |
-| [rv32-array-max](./rv32-array-max/) | Find maximum in array | RISC-V Assembly |
-| [rv32-array-sum](./rv32-array-sum/) | Array summation | RISC-V Assembly |
-| [rv32-count-jumps](./rv32-count-jumps/) | Jump counting | RISC-V Assembly |
-| [sudoku](./sudoku/) | Sudoku solver in assembly | RISC-V Assembly |
+Implementation of fundamental data structures and algorithms in Python.
 
-### Systems Programming (C Language)
-Various C programming assignments demonstrating system-level programming skills.
+| Category | Projects |
+|----------|----------|
+| **Trees** | Binary Search Tree (`BST.py`) |
+| **Lists** | Linked Lists (`linkedlists.py`) |
+| **Hash** | Hash Table (`hashtable.py`) |
+| **Heap** | Min/Max Heap (`heap.py`) |
+| **Stack/Queue** | Stack & Queue implementations |
+| **Graphs** | Graph traversal, Dijkstra's algorithm |
+| **Sorting** | Bubble, Selection, Merge, Quick Sort |
+
+**Skills**: Algorithm complexity, OOP, Problem solving
+
+---
+
+### [CS2810 - Computer Organization & Architecture](./CS2810/)
+
+Low-level programming with C and RISC-V assembly.
+
+#### C Programming
 
 | Project | Description | Skills |
 |---------|-------------|--------|
-| [c-hello-world](./c-hello-world/) | Hello World | Basic I/O |
-| [c-calculator](./c-calculator/) | Calculator using sscanf | String parsing |
-| [c-diamond](./c-diamond/) | Diamond pattern | Loops, patterns |
-| [c-difference-of-squares](./c-difference-of-squares/) | Mathematical computation | Functions |
-| [c-hamming](./c-hamming/) | Hamming distance | Bit operations |
-| [c-sieve](./c-sieve/) | Sieve of Eratosthenes | Algorithm implementation |
-| [c-maze-solver](./c-maze-solver/) | Maze solver (cellular logic) | 2D arrays, algorithms |
-| [c-wordle](./c-wordle/) | Wordle game clone | String processing |
-| [c-midterm](./c-midterm/) | Midterm projects | Various |
+| `c-hello-world` | Hello World | Basic I/O |
+| `c-calculator` | Text calculator | `sscanf`, parsing |
+| `c-diamond` | Diamond pattern | Loops |
+| `c-hamming` | Hamming distance | Bit operations |
+| `c-sieve` | Prime finder | Sieve algorithm |
+| `c-maze-solver` | Maze solver | 2D arrays, cellular logic |
+| `c-wordle` | Wordle clone | String processing |
 
-## 🛠️ Technologies Used
+#### RISC-V Assembly
 
-- **Languages**: Python, C, RISC-V Assembly
-- **Data Structures**: Trees, Graphs, Hash Tables, Heaps, Linked Lists
-- **Algorithms**: Sorting, Searching, Graph traversal, Dynamic Programming
-- **Tools**: GCC, Make, GDB, Python 3
+| Project | Description |
+|---------|-------------|
+| `rv32-stoi` | String to integer conversion |
+| `rv32-array-max` | Find maximum in array |
+| `rv32-array-sum` | Array summation |
+| `rv32-count-jumps` | Control flow counting |
+| `sudoku` | Sudoku solver in assembly |
 
-## 📂 Directory Structure
+**Skills**: Memory management, CPU architecture, Assembly programming
+
+---
+
+## 📂 Repository Structure
 
 ```
 Utah-Tech-University-Coursework/
-├── CS1410/                 # Intro to CS (Python)
-├── CS2420/                 # Data Structures (Python)
-├── CS2810/                 # Computer Organization
-├── c-*/                    # C programming assignments
-├── rv32-*/                 # RISC-V assembly projects
-└── sudoku/                 # Assembly sudoku solver
+├── CS1410/                     # Intro to CS (Python)
+│   ├── README.md
+│   ├── caloric_balance.py
+│   ├── DNA.py
+│   └── ...
+├── CS2420/                     # Data Structures (Python)
+│   ├── README.md
+│   ├── BST.py
+│   ├── graph-dijkstra.py
+│   └── ...
+└── CS2810/                     # Computer Architecture
+    ├── README.md
+    ├── c-programming/          # C assignments
+    │   ├── c-calculator/
+    │   ├── c-maze-solver/
+    │   └── ...
+    └── risc-v-assembly/        # RISC-V assignments
+        ├── rv32-stoi/
+        ├── sudoku/
+        └── ...
 ```
 
-## 🔧 Building C Projects
+## 🛠️ Technologies Used
 
-Each C project includes a Makefile:
+| Language | Tools | Topics |
+|----------|-------|--------|
+| **Python** | Python 3.x | OOP, Data Structures, Algorithms |
+| **C** | GCC, Make, GDB | Memory management, Systems programming |
+| **RISC-V** | RISC-V toolchain | Assembly, CPU architecture |
 
+## 🔧 Building & Running
+
+### Python Projects
 ```bash
-cd c-calculator
+cd CS2420
+python3 BST.py
+```
+
+### C Projects
+```bash
+cd CS2810/c-programming/c-calculator
 make        # Build and test
-make a.out  # Build only
 ./a.out     # Run
+```
+
+### RISC-V Projects
+```bash
+cd CS2810/risc-v-assembly/rv32-stoi
+make        # Assemble and test
 ```
 
 ## 👤 Author
 
 **Ikken Sakai (坂井 壱謙)**
-- Former Utah Tech University CS Student → 東京国際工科専門職大学
+- Former Utah Tech University Computer Science Student
+- Currently: 東京国際工科専門職大学 工科学部 情報工学科 AI戦略コース
 - GitHub: [@Ikken-Sakai](https://github.com/Ikken-Sakai)
-
