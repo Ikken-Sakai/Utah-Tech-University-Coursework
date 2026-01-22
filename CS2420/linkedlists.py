@@ -89,10 +89,10 @@ def main():
 	f = open("DeleteNames.txt", "r")
 	for line in f:
 		ssn = line.strip()
-		dummyStudent = Student2.Student("", "", "ssn", "", "")
+		dummyStudent = Student2.Student("", "", ssn, "", "")
 		ok = allStudents.Delete(dummyStudent)
-	if not ok:
-		print("Error")
+		if not ok:
+			print("Error")
 	f.close()
 	print("Deleted")
 	t2 = time.time()

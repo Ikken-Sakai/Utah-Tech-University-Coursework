@@ -1,8 +1,9 @@
-lass Node:
+class Node:
 
 	def __init__(self, item, nxt):
 		self.mItem = item
 		self.mNext = nxt
+
 class Queue:
 
 	def __init__(self):
@@ -20,15 +21,17 @@ class Queue:
 			self.mLast.mNext = node
 			self.mLast = node
 		self.mCount += 1
+
 	def dequeue(self):
-		if self.mCount <= 1:
-			temp_front = self.mFirst
-			self.mFront = None
-			self.mCount -= 1
+		if self.mCount == 0:
+			return None
+		temp_front = self.mFirst
+		if self.mCount == 1:
+			self.mFirst = None
+			self.mLast = None
 		else:
-			temp_front = self.mFirst
 			self.mFirst = self.mFirst.mNext
-			self.mCount -= 1
+		self.mCount -= 1
 		return temp_front.mItem
 
 	def empty(self):
@@ -36,5 +39,6 @@ class Queue:
 			return True
 		else:
 			return False
+
 	def getSize(self):
-		return count
+		return self.mCount

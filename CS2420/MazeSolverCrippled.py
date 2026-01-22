@@ -98,39 +98,70 @@ class Maze:
     # It should return False if this is a loser cell.
     def SolveR( self, i,  j):
         # Mark this cell as visited.
+        self.cells[i][j].visited = True
 
         # Get index number of this cell
+        index = j * M + i
 
-	# Record the index in the class variable mMoves.
+        # Record the index in the class variable mMoves.
+        self.mMoves.append(index)
         
-	# If we are at the end cell, return true.
+        # If we are at the end cell, return true.
+        if i == M-1 and j == N-1:
+            return True
         
-	# move left if there is no wall, and it hasn't been visited. Return true if it returns true.
-
         # move right if there is no wall, and it hasn't been visited. Return true if it returns true.
+        if not self.cells[i][j].r and i+1 < M and not self.cells[i+1][j].visited:
+            if self.SolveR(i+1, j):
+                return True
 
-	# move down if there is no wall, and it hasn't been visited. Return true if it returns true.
+        # move down if there is no wall, and it hasn't been visited. Return true if it returns true.
+        if not self.cells[i][j].b and j+1 < N and not self.cells[i][j+1].visited:
+            if self.SolveR(i, j+1):
+                return True
 
-	# move up if there is no wall, and it hasn't been visited. Return true if it returns true.
+        # move left if there is no wall, and it hasn't been visited. Return true if it returns true.
+        if not self.cells[i][j].l and i-1 >= 0 and not self.cells[i-1][j].visited:
+            if self.SolveR(i-1, j):
+                return True
 
-	# This is a loser cell, so undo the move from self.mMoves, and return false to the previous cell.
+        # move up if there is no wall, and it hasn't been visited. Return true if it returns true.
+        if not self.cells[i][j].t and j-1 >= 0 and not self.cells[i][j-1].visited:
+            if self.SolveR(i, j-1):
+                return True
+
+        # This is a loser cell, so undo the move from self.mMoves, and return false to the previous cell.
+        self.mMoves.pop()
         return False
 
     # Write this method.
     # Use a depth first search.
     def Solve(self):
-	# Initialize mMoves array
+        # Initialize mMoves array
         self.mMoves = []
 
-	# Initialize all cells to not visited
+        # Initialize all cells to not visited
+        for i in range(M):
+            for j in range(N):
+                self.cells[i][j].visited = False
 	
-	# Start searching recursively from 0,0
+        # Start searching recursively from 0,0
+        self.SolveR(0, 0)
 
     # Write this method.
     def DrawSolution(self, win):
         print (self.mMoves)
         
         # Now draw it graphically!
+        for k in range(len(self.mMoves)):
+            index = self.mMoves[k]
+            i = index % M
+            j = index // M
+            x = MARGIN + i * CELL_SIZE + CELL_SIZE // 2
+            y = MARGIN + j * CELL_SIZE + CELL_SIZE // 2
+            circle = Circle(Point(x, y), CELL_SIZE // 4)
+            circle.setFill("red")
+            circle.draw(win)
            
 
 
